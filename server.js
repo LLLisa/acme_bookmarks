@@ -4,6 +4,11 @@ const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 app.use('/bookmarks', require('./views/bookmarks'));
+app.use('/categories', require('./views/categories'));
+
+app.get('/categories', (req, res) => {
+  res.redirect('/categories');
+});
 
 app.get('/', (req, res) => {
   res.redirect('/bookmarks');
