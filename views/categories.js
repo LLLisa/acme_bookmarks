@@ -2,7 +2,6 @@ const express = require('express');
 const { db, Bookmark } = require('../db');
 
 const app = express.Router(); //export the router
-module.exports = app;
 
 app.post('/:trash', async (req, res, next) => {
   try {
@@ -44,3 +43,5 @@ app.get('/:_category', async (req, res, next) => {
     next(error);
   }
 });
+
+module.exports = app;

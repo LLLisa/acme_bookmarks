@@ -2,7 +2,6 @@ const express = require('express');
 const { db, Bookmark } = require('../db');
 
 const app = express.Router();
-module.exports = app;
 
 app.get('/', async (req, res, next) => {
   //don't need 'bookmarks' path because route is redirected to this module
@@ -43,3 +42,5 @@ app.post('/', async (req, res, next) => {
     next(error);
   }
 });
+
+module.exports = app;
