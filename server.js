@@ -29,6 +29,7 @@ app.get('/', (req, res) => {
 
 const syncAndSeed = async () => {
   try {
+    //can destructure and map over instances
     await Bookmark.create({ link: 'Bookmark1', category: 'category1' });
     await Bookmark.create({ link: 'Bookmark2', category: 'category2' });
     await Bookmark.create({ link: 'Bookmark3', category: 'category2' });
